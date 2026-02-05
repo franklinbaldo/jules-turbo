@@ -7,8 +7,8 @@ export default function DashboardLayout() {
   const { setApiKey } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    setApiKey(null, false);
+  const handleLogout = async () => {
+    await setApiKey(null, false);
     navigate("/login");
   };
 

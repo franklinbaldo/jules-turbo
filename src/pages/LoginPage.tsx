@@ -19,7 +19,7 @@ export default function LoginPage() {
     try {
       // Validate key by fetching sources (limit 1)
       await api.sources.list(key, 1);
-      setApiKey(key, remember);
+      await setApiKey(key, remember);
       navigate("/");
     } catch (err: any) {
       console.error(err);
